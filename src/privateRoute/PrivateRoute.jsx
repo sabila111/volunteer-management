@@ -10,7 +10,7 @@ const location = useLocation()
 
 
 if (loading) {
-    return <span className="loading loading-spinner loading-lg justify-center"></span>
+    return <span className="loading loading-spinner loading-lg justify-center text-center font-bold"></span>
 }
 
 if (user){

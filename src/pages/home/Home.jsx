@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import Banner from "./Banner";
+import VolunteerNow from "./VolunteerNow";
 
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
 
 
 <Banner></Banner>
-
+<VolunteerNow></VolunteerNow>
         </div>
     );
 };
