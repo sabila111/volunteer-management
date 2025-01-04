@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import VolunteerNowCard from "./VolunteerNowCard";
 
 const VolunteerNow = () => {
 
-    const[games, setGames] = useState([])
+    const[volunteers, setVolunteers] = useState([])
     
     
     useEffect(()=>{
@@ -10,13 +11,18 @@ const VolunteerNow = () => {
         .then((res) => res.json())
         .then((data) =>{
             const sortedReview = data.sort((a, b) => b.rating - a.rating)
-            setGames(sortedReview.slice(0,6))
+            setVolunteers(sortedReview.slice(0,6))
+           
         })
     },[])
 
     return (
-        <div>
+        <div className="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-5 mt-10">
             
+                {
+volunteers.map(volunteer=> <VolunteerNowCard key={volunteer._id} volunteer={volunteer}></VolunteerNowCard>)
+                }
+           
         </div>
     );
 };
