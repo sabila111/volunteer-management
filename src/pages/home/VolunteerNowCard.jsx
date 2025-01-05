@@ -16,7 +16,7 @@ const VolunteerNowCard = ({volunteer}) => {
     
          <p className="text-xl font-bold mb-4">Deadline: {deadline}</p>
           <div className="">
-            <Link to={`/allReview/${volunteer._id}`}><button className="px-4 py-3 rounded-xl bg-gradient-to-r from-indigo-700 to-cyan-400 text-white font-bold">View Details</button></Link>
+            <Link to={`/volunteerNeedDetails/${volunteer._id}`}><button className="px-4 py-3 rounded-xl bg-gradient-to-r from-indigo-700 to-cyan-400 text-white font-bold">View Details</button></Link>
           </div>
         </div>
       </div>

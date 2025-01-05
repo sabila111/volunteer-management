@@ -42,7 +42,7 @@ const AddVolunteer = () => {
             if(data.insertedId){
                 Swal.fire({
                     title: 'Success',
-                    text: 'Added review successfully',
+                    text: 'Added successfully',
                     icon: 'success',
                     confirmButtonText: 'Cool'
                   })
