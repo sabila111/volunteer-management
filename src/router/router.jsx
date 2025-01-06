@@ -10,6 +10,7 @@ import Register from "../pages/register/Register";
 import AddVolunteer from "../pages/addVolunteer/AddVolunteer";
 import PrivateRoute from "../privateRoute/PrivateRoute";
 import VolunteerNeedDetails from "../pages/details/VolunteerNeedDetails";
+import BeVolunteer from "../pages/beAVolunteer/BeVolunteer";
 
     const router = createBrowserRouter([
         {
@@ -32,6 +33,11 @@ import VolunteerNeedDetails from "../pages/details/VolunteerNeedDetails";
             {
               path: "volunteerNeedDetails/:id",
               element:<PrivateRoute> <VolunteerNeedDetails></VolunteerNeedDetails></PrivateRoute> ,
+              loader: ({params})=> fetch(`http://localhost:5000/volunteer/${params.id}`)
+            },
+            {
+              path: "beVolunteer/:id",
+              element:<PrivateRoute> <BeVolunteer></BeVolunteer></PrivateRoute> ,
               loader: ({params})=> fetch(`http://localhost:5000/volunteer/${params.id}`)
             },
             {

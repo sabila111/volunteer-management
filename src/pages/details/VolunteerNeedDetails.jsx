@@ -35,7 +35,7 @@ const VolunteerNeedDetails = () => {
    
    
   
-     <Link>
+     <Link to={`/beVolunteer/${volunteer._id}`}>
      <button className="px-4 py-3 rounded-lg text-white w-full my-5  bg-gradient-to-r from-indigo-700 to-cyan-400">Be a Volunteer</button>
      </Link>
   
