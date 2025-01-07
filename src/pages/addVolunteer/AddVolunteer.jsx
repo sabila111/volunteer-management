@@ -21,9 +21,9 @@ const AddVolunteer = () => {
         const category = form.category.value
         const location = form.location.value
         const description = form.description.value
-        const thumbnail = form.thumbnail.value
         const volunteersNeeded = form.volunteersNeeded.value
         const  deadline= startDate
+        const thumbnail = form.thumbnail.value
 
         const addReview = { name, email, post, category, location, description, thumbnail, volunteersNeeded, deadline }
         console.log(addReview)
@@ -46,6 +46,7 @@ const AddVolunteer = () => {
                     icon: 'success',
                     confirmButtonText: 'Cool'
                   })
+                  form.reset()
             }
 
         })
@@ -153,7 +154,7 @@ const AddVolunteer = () => {
                             <span className="label-text">Volunteers Needed </span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="volunteersNeeded " placeholder="Volunteers Needed " className="input input-bordered w-full" />
+                            <input type="text" name="volunteersNeeded" placeholder="Volunteers Needed " className="input input-bordered w-full" />
                         </label>
                     </div>
 
@@ -179,7 +180,7 @@ const AddVolunteer = () => {
                            <span className="label-text">Thumbnail </span>
                        </label>
                        <label className="input-group">
-                           <input type="text" name="thumbnail " placeholder="Thumbnail " className="input input-bordered w-full" />
+                           <input type="text" name="thumbnail" placeholder="Thumbnail " className="input input-bordered w-full" />
                        </label>
                    </div>
 

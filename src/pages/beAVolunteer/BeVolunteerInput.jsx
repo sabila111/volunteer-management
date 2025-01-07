@@ -1,10 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const BeVolunteerInput = ({ volunteer }) => {
     const { postTitle, thumbnail, category, deadline, description, location, volunteersNeeded, organizer_name, organizer_email } = volunteer
 
     const { user } = useContext(AuthContext)
+    const{id} = useParams()
 
     const handleAddVolunteer = e => {
         e.preventDefault()
@@ -14,8 +17,35 @@ const BeVolunteerInput = ({ volunteer }) => {
         const email = form.email.value
         const suggestion = form.suggestion.value
 
-        const addReview = { name, email, suggestion, status: "requested" }
+        const addReview = { name, email, suggestion, status: "requested", postId:id, }
         console.log(addReview)
+
+
+        fetch('http://localhost:5000/volunteer-application', {
+                method:'POST',
+                headers:{
+                    'content-type' : 'application/json'
+                },
+                
+                body:JSON.stringify(addReview)
+                })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if(data.result.insertedId && data.incrementResult.modifiedCount > 0 && data.incrementResult.matchedCount > 0){
+                        Swal.fire({
+                            title: 'Success',
+                            text: 'Added successfully',
+                            icon: 'success',
+                            confirmButtonText: 'Cool'
+                          })
+                          form.reset()
+                    }
+        
+                })
+                .catch(error => {
+            console.error("catch error:", error);
+        });
 
     }
 
@@ -31,7 +61,7 @@ const BeVolunteerInput = ({ volunteer }) => {
                                 <span className="label-text">Organizer Name</span>
                             </label>
                             <label className="input-group">
-                                <input readOnly value={organizer_name} type="text" name="name" placeholder="name" className="input input-bordered w-full" />
+                                <input readOnly value={organizer_name} type="text"  placeholder="name" className="input input-bordered w-full" />
                             </label>
                         </div>
 
@@ -40,7 +70,7 @@ const BeVolunteerInput = ({ volunteer }) => {
                                 <span className="label-text">Organizer Email</span>
                             </label>
                             <label className="input-group">
-                                <input readOnly value={organizer_email} type="email" name="email" placeholder="email" className="input input-bordered w-full" />
+                                <input readOnly value={organizer_email} type="email"  placeholder="email" className="input input-bordered w-full" />
                             </label>
                         </div>
 
@@ -137,7 +167,8 @@ const BeVolunteerInput = ({ volunteer }) => {
                             <span className="label-text">Volunteers Name </span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="name" readOnly value={user.displayName || 'No Name'} placeholder="Volunteer Name " className="input input-bordered w-full" />
+                            <input type="text" name="name" readOnly 
+                            value={user.displayName || 'No Name'} placeholder="Volunteer Name " className="input input-bordered w-full" />
                         </label>
                     </div>
 
@@ -163,7 +194,7 @@ const BeVolunteerInput = ({ volunteer }) => {
                             <span className="label-text">Suggestion </span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="suggestion " placeholder="Suggestion " className="input input-bordered w-full" />
+                            <input type="text" name="suggestion" placeholder="Suggestion " className="input input-bordered w-full" />
                         </label>
                     </div>
 
@@ -174,7 +205,7 @@ const BeVolunteerInput = ({ volunteer }) => {
                         <label className="input-group">
                             <input type="text" name="status"
                                 defaultValue="requested"
-                                readOnly placeholder="Status " className="input input-bordered w-full" />
+                                readOnly placeholder="Status" className="input input-bordered w-full" />
                         </label>
 
                     </div>
