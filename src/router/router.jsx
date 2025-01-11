@@ -11,6 +11,7 @@ import AddVolunteer from "../pages/addVolunteer/AddVolunteer";
 import PrivateRoute from "../privateRoute/PrivateRoute";
 import VolunteerNeedDetails from "../pages/details/VolunteerNeedDetails";
 import BeVolunteer from "../pages/beAVolunteer/BeVolunteer";
+import ManagePost from "../pages/managePost/ManagePost";
 
     const router = createBrowserRouter([
         {
@@ -25,6 +26,7 @@ import BeVolunteer from "../pages/beAVolunteer/BeVolunteer";
             {
               path: "allVolunteerNeed",
               element:<AllVolunteer></AllVolunteer> ,
+              loader : ()=> fetch('http://localhost:5000/volunteer')
             },
             {
               path: "addVolunteerNeed",
@@ -39,6 +41,11 @@ import BeVolunteer from "../pages/beAVolunteer/BeVolunteer";
               path: "beVolunteer/:id",
               element:<PrivateRoute> <BeVolunteer></BeVolunteer></PrivateRoute> ,
               loader: ({params})=> fetch(`http://localhost:5000/volunteer/${params.id}`)
+            },
+            {
+              path: "/manage",
+              element:<PrivateRoute><ManagePost></ManagePost></PrivateRoute> ,
+              loader : ()=> fetch('http://localhost:5000/volunteer-application')
             },
             {
               path: "/login",
