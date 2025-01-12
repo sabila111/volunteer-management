@@ -99,7 +99,7 @@ You have no volunteer need posts. Add one to see it here!
 
                 <button onClick={()=>handlePostDelete(post._id)} className="bg-gradient-to-r from-indigo-700 to-cyan-400 text-white sm:text-base md:text-lg lg:text-xl px-3 py-2 sm:px-4 sm:py-3 "><IoTrashBinOutline /></button>
 
-            <Link to={`/myReview/update/${post._id}`}>
+            <Link to={`/manage/update/${post._id}`}>
             <button className="bg-gradient-to-r from-indigo-700 to-cyan-400 text-white sm:text-base md:text-lg lg:text-xl px-3 py-2 sm:px-4 sm:py-3 "><IoPencil /></button>
             </Link>
               
