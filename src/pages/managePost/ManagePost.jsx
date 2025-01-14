@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import NeedPost from './NeedPost';
 import RequestPost from './RequestPost';
+import { Helmet } from 'react-helmet';
 
 const ManagePost = () => {
     const [activeSection, setActiveSection] = useState("needPosts");
@@ -8,11 +9,24 @@ const ManagePost = () => {
   const handleToggle = (section) => {
     setActiveSection(section);
   };
+
+  const getTitle = () => {
+    return activeSection === "needPosts"
+        ? "My Volunteer Need Posts Dashboard"
+        : "My Volunteer Request Posts Dashboard";
+};
+
     return (
         <div>
-           <h1 className="text-4xl font-bold text-center text-indigo-600 my-8">
-        My Volunteer Dashboard
-      </h1>
+
+<Helmet>
+
+<title>KindHive | Volunteer Dashboard</title>
+</Helmet>
+
+<h1 className="text-4xl font-bold text-center text-indigo-600 my-8">
+                {getTitle()}
+            </h1>
       <div className="flex justify-center gap-4 mb-8 mt-12">
         <button
           className={`px-4 py-3 rounded-xl bg-gradient-to-r from-indigo-700 to-cyan-400 text-white font-bold ${activeSection === "needPosts" ? "active" : ""}`}
