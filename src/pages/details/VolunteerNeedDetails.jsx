@@ -33,10 +33,20 @@ const VolunteerNeedDetails = () => {
    </div>
    
    
-  
-     <Link to={`/beVolunteer/${volunteer._id}`}>
-     <button className="px-4 py-3 rounded-lg text-white w-full my-5  bg-gradient-to-r from-indigo-700 to-cyan-400">Be a Volunteer</button>
-     </Link>
+  {
+    volunteersNeeded > 0 ?  
+    
+    <Link to={`/beVolunteer/${volunteer._id}`}>
+    <button className="px-4 py-3 rounded-lg text-white w-full my-5  bg-gradient-to-r from-indigo-700 to-cyan-400">Be a Volunteer</button>
+    </Link>
+    
+    :
+<p className="text-center text-red-600 font-bold text-lg my-5 pb-5">
+              No more volunteers are needed for this post.
+            </p>
+
+  }
+    
   
   </div>
 </div>
