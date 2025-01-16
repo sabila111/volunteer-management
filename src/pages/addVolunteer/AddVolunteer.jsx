@@ -31,7 +31,7 @@ const AddVolunteer = () => {
         }
         console.log(addReview)
 
-        fetch('http://localhost:5000/volunteer', {
+        fetch('https://assignment-11-server-delta-bice.vercel.app/volunteer', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

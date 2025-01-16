@@ -5,11 +5,13 @@ import Footer from "../shared/Footer";
 const MainLayout = () => {
     return (
         <div className="">
-            <div className="dark:bg-gray-900 text-black dark:text-white max-w-7xl mx-auto">
+            <div className=" max-w-7xl mx-auto">
+            <div className="dark:bg-gray-900 text-black dark:text-white">
                 <Navbar></Navbar>
-                <Outlet></Outlet>
+                
             </div>
-
+            <Outlet></Outlet>
+            </div>
 
             <Footer></Footer>
 

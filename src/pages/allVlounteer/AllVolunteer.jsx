@@ -15,7 +15,7 @@ const AllVolunteer = () => {
         setSearchTerm(e.target.value);
 
       
-        fetch(`http://localhost:5000/volunteer?title=${e.target.value}`)
+        fetch(`https://assignment-11-server-delta-bice.vercel.app/volunteer?title=${e.target.value}`)
             .then((res) => res.json())
             .then((data) => setVolunteers(data))
             .catch((err) => console.error(err));

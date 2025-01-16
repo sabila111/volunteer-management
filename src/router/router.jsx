@@ -27,7 +27,7 @@ import UpdatePost from "../pages/managePost/UpdatePost";
             {
               path: "allVolunteerNeed",
               element:<AllVolunteer></AllVolunteer> ,
-              loader : ()=> fetch('http://localhost:5000/volunteer')
+              loader : ()=> fetch('https://assignment-11-server-delta-bice.vercel.app/volunteer')
             },
             {
               path: "addVolunteerNeed",
@@ -36,22 +36,22 @@ import UpdatePost from "../pages/managePost/UpdatePost";
             {
               path: "volunteerNeedDetails/:id",
               element:<PrivateRoute> <VolunteerNeedDetails></VolunteerNeedDetails></PrivateRoute> ,
-              loader: ({params})=> fetch(`http://localhost:5000/volunteer/${params.id}`)
+              loader: ({params})=> fetch(`https://assignment-11-server-delta-bice.vercel.app/volunteer/${params.id}`)
             },
             {
               path: "beVolunteer/:id",
               element:<PrivateRoute> <BeVolunteer></BeVolunteer></PrivateRoute> ,
-              loader: ({params})=> fetch(`http://localhost:5000/volunteer/${params.id}`)
+              loader: ({params})=> fetch(`https://assignment-11-server-delta-bice.vercel.app/volunteer/${params.id}`)
             },
             {
               path: "/manage",
               element:<PrivateRoute><ManagePost></ManagePost></PrivateRoute> ,
-              loader : ()=> fetch('http://localhost:5000/volunteer-application')
+              loader : ()=> fetch('https://assignment-11-server-delta-bice.vercel.app/volunteer-application')
             },
             {
               path: "/manage/update/:id",
               element:<PrivateRoute><UpdatePost></UpdatePost></PrivateRoute> ,
-              loader : ({params})=> fetch(`http://localhost:5000/volunteer/${params.id}`)
+              loader : ({params})=> fetch(`https://assignment-11-server-delta-bice.vercel.app/volunteer/${params.id}`)
             },
             {
               path: "/login",
