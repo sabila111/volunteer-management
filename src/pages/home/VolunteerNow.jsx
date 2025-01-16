@@ -18,7 +18,7 @@ const VolunteerNow = () => {
     },[])
 
     return (
-        <div>
+        <div >
             <div className="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-5 mt-10">
             
             {

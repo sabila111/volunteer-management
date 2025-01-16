@@ -51,7 +51,7 @@ const BeVolunteerInput = ({ volunteer }) => {
 
     return (
         <div className="bg-gradient-to-r from-indigo-700 to-cyan-400  p-24">
-            <h2 className="text-3xl font-extrabold mb-4 text-center">----Be A Volunteer----</h2>
+            <h2 className="text-3xl font-extrabold mb-4 text-center">Be A Volunteer</h2>
             <form onSubmit={handleAddVolunteer}>
                 {/* form row 1 */}
                 {user ?

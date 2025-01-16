@@ -13,7 +13,7 @@ const VolunteerNeedDetails = () => {
 <title>KindHive | Volunteer Need Details Page</title>
 </Helmet>
 
-<h2 className='text-center text-3xl font-bold mt-10 mb-8 text-indigo-700'>----Volunteer Details Page----</h2>
+<h2 className='text-center text-3xl font-bold mt-10 mb-8 text-indigo-700'>Volunteer Details Page</h2>
 
 <div className=" bg-base-100 w-8/12 mx-auto shadow-xl px-7">
   <figure>
@@ -23,13 +23,13 @@ const VolunteerNeedDetails = () => {
       alt="Shoes" />
   </figure>
   <div className="my-5 ">
-    <h2 className="text-center text-3xl font-bold">{postTitle}</h2>
+    <h2 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold">{postTitle}</h2>
     <p className='my-3 font-medium text-gray-500 text-center'>Category: {category}</p>
-    <p className='text-center font-semibold text-lg my-3'>{description}</p>
-    <p className='text-center font-semibold mb-3 text-xl'>Volunteers Need: <span className='text-gray-500'>{volunteersNeeded}</span></p>
+    <p className='text-center font-semibold text-base md:text-lg lg:text-lg my-3'>{description}</p>
+    <p className='text-center font-semibold mb-3 text-lg lg:text-xl'>Volunteers Need: <span className='text-gray-500'>{volunteersNeeded}</span></p>
    <div className='flex justify-around text-xl font-medium'>
-   <p className=''>Deadline: <span className='text-gray-500'>{deadline}</span></p>
-   <p className=''>Location: <span className='text-gray-500'>{location}</span></p>
+   <p className='text-base md:text-lg lg:text-xl'>Deadline: <span className='text-gray-500'>{deadline}</span></p>
+   <p className='text-base md:text-lg lg:text-xl'>Location: <span className='text-gray-500'>{location}</span></p>
    </div>
    
    

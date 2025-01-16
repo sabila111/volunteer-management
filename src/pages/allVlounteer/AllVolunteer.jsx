@@ -35,7 +35,8 @@ const AllVolunteer = () => {
                 />
             </div>
 
-            <div className="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-5 mt-10">
+           
+            <div className="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-5 mt-10  mx-auto">
             {filteredVolunteers.length > 0 ? (
                     filteredVolunteers.map((volunteer) => (
                         <AllVolunteerCard key={volunteer._id} volunteer={volunteer}></AllVolunteerCard>
@@ -44,6 +45,7 @@ const AllVolunteer = () => {
                     <p className="text-center text-red-600 font-bold">No matching volunteers found</p>
                 )}
             </div>
+          
         </div>
     );
 };
