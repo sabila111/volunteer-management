@@ -4,7 +4,7 @@
 KindHive is a volunteer management platform designed to connect organizers with volunteers. It enables users to create, manage, and participate in volunteer opportunities effortlessly.  
 
 ## **Live URL**  
-[Visit KindHive Live](https://example-live-url.com)  
+[Visit KindHive Live]( https://assignment-11-project-8a718.web.app/)  
 
 ## **Key Features**  
 - **Volunteer Management:**  
