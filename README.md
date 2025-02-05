@@ -66,7 +66,7 @@ Here are the key npm packages used in the project:
 ## **Setup Instructions**  
 1. Clone the repository:  
    ```bash  
-   git clone https://github.com/your-username/kindhive.git  
+   git clone https://github.com/sabila11/volunteer-management  
    ```  
 2. Install dependencies:  
    ```bash  
