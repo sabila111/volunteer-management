@@ -10,6 +10,12 @@ const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext)
     const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
     
 
     useEffect(() => {
@@ -32,13 +38,13 @@ const Navbar = () => {
     }
 
     const links = <>
-        <li><NavLink to='/' className={`dark:text-white`}>Home</NavLink></li>
-        <li><NavLink to='/allVolunteerNeed' className={`dark:text-white`}>All volunteer Need posts</NavLink></li>
+        <li className="text-white"><NavLink to='/' className={`dark:text-white`}>Home</NavLink></li>
+        <li className="text-white"><NavLink to='/allVolunteerNeed' className={`dark:text-white`}>All volunteer Need posts</NavLink></li>
 
     </>
     const links2 = <>
-        <li><NavLink to='/addVolunteerNeed'>Add Volunteer need Post</NavLink></li>
-        <li><NavLink to='/manage'>Manage My Posts</NavLink></li>
+        <li className="text-black"></li>
+        <li></li>
 
 
     </>
@@ -46,7 +52,7 @@ const Navbar = () => {
 
 
     return (
-       <div className="bg-gradient-to-r from-cyan-400 to-indigo-700 dark:bg-gray-900 text-black dark:text-white">
+       <div className="bg-gradient-to-r from-cyan-400 to-indigo-700  text-black dark:text-white">
          <div className="navbar max-w-7xl mx-auto  py-4  text-black  relative z-[20]">
             <div className="navbar-start">
                 <div className="dropdown">
@@ -83,7 +89,7 @@ const Navbar = () => {
                 <ul className="  active mx-5  flex justify-center items-center gap-6 px-1 menu-horizontal font-medium text-lg ">
 
                     {links}
-                    <li className="relative">
+                    {/* <li className="relative">
                         <details className="group">
                             <summary className="flex items-center cursor-pointer  group-open:text-indigo-500 group-open:border-b-2 border-indigo-500    dark:text-white">
                                 My Profile
@@ -104,39 +110,55 @@ const Navbar = () => {
                                 {links2}
                             </ul>
                         </details>
-                    </li>
+                    </li> */}
 
                 </ul>
             </div>
-            <div className="navbar-end gap-2">
+            <div className="navbar-end gap-2 relative z-[50]">
                 {
                     user ?
-                        <div className="relative group flex items-center gap-1 md:gap-4 lg:gap-4 ">
-                            {user.photoURL && (
-                                <>
+                    <div className="flex items-center gap-1 md:gap-4 lg:gap-4">
+                    {user.photoURL && (
+                        <div className="relative">
+                            <img
+                                src={user.photoURL}
+                                alt="Profile"
+                                className="w-12 h-12 rounded-full cursor-pointer"
+                                onClick={toggleDropdown}
+                            />
 
-                                    <img
-                                        src={user.photoURL}
-                                        alt=""
-                                        className="w-12 h-12 rounded-full cursor-pointer"
-                                    />
-                                    
-                                    
-                                        <div className="absolute top-16 left-0 hidden w-40 bg-white shadow-md p-3 rounded-lg text-center group-hover:flex flex-col gap-2">
-                                        <span className="text-sm font-medium text-gray-700">{user.displayName}</span>
-                                        <button
-                                            onClick={handleSignOut}
-                                            className="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-500"
-                                        >
-                                            Logout
-                                        </button>
-                                    </div>
+                            {isDropdownOpen && (
+                                <div className="absolute -right-10 mt-2 w-48 bg-white shadow-md rounded-lg p-3 z-[100]">
+                                    <span className="block pb-2 text-center text-sm font-medium text-gray-700">{user.displayName}</span>
+                                    <NavLink to='/addVolunteerNeed' className={({ isActive }) => 
+    `block py-2 text-black text-center rounded-lg ${
+      isActive ? 'bg-gradient-to-r from-cyan-400 to-indigo-700 text-white' : 'hover:bg-gray-100'
+    }`
+  }>Add Volunteer need Post</NavLink>
+                                    <NavLink 
+  to='/manage' 
+  className={({ isActive }) => 
+    `block py-2 text-black text-center rounded-lg ${
+      isActive ? 'bg-gradient-to-r from-cyan-400 to-indigo-700 text-white' : 'hover:bg-gray-100'
+    }`
+  }
+>
+  Manage My Posts
+</NavLink>
 
-                                    
-                                </>
+
+
+                                    <button
+                                        onClick={handleSignOut}
+                                        className="w-full px-4 py-2 mt-2 bg-gradient-to-r from-indigo-700 to-cyan-400 text-white rounded hover:bg-gradient-to-r from-indigo-700 to-cyan-400"
+                                    >
+                                        Logout
+                                    </button>
+                                </div>
                             )}
-
                         </div>
+                    )}
+                </div>
 
 
                         :

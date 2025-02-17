@@ -66,7 +66,7 @@ const AddVolunteer = () => {
             </Helmet>
 
 
-            <div className="bg-gradient-to-r from-indigo-700 to-cyan-400  p-24">
+            <div className="  p-24">
                 <h2 className="text-3xl font-extrabold mb-4 text-center">Add Volunteer Need Post</h2>
                 <form onSubmit={handleAddVolunteer}>
                     {/* form row 1 */}
@@ -190,7 +190,7 @@ const AddVolunteer = () => {
 
                     </div>
 
-                    <input type="submit" value="Add Post" className="btn btn-block bg-black text-white mt-6 " />
+                    <input type="submit" value="Add Post" className="btn btn-block bg-gradient-to-r from-indigo-700 to-cyan-400 text-white mt-6 " />
                 </form>
             </div>
 
