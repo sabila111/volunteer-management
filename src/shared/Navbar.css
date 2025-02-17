@@ -17,11 +17,11 @@
     bottom: -2px;
     width: 100%;
     height: 2px;
-    background-color: rgb(99 102 241);
+    background-color: rgb(67 56 202);
   }
 
   .menu-horizontal li a.active {
-    color: rgb(99 102 241);
+    color: rgb(67 56 202);
     
   }
 

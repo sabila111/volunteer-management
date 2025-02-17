@@ -46,7 +46,8 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar bg-white dark:bg-gray-800 p-4 text-black dark:text-white relative z-[20]">
+       <div className="bg-gradient-to-r from-cyan-400 to-indigo-700 dark:bg-gray-900 text-black dark:text-white">
+         <div className="navbar max-w-7xl mx-auto  py-4  text-black  relative z-[20]">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -76,7 +77,7 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl font-semibold"><span className="text-4xl font-bold text-indigo-600 -mr-2 mb-3">Kind</span>Hive</a>
+                <a className="text-xl font-semibold"><span className="text-4xl font-bold text-indigo-600  mb-3">Kind</span>Hive</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="  active mx-5  flex justify-center items-center gap-6 px-1 menu-horizontal font-medium text-lg ">
@@ -160,6 +161,7 @@ const Navbar = () => {
                 </button>
             </div>
         </div>
+       </div>
     );
 };
 
