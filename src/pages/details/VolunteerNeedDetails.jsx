@@ -13,7 +13,7 @@ const VolunteerNeedDetails = () => {
 <title>KindHive | Volunteer Need Details Page</title>
 </Helmet>
 
-<h2 className='text-center text-3xl font-bold mt-10 mb-8 text-indigo-700'>Volunteer Details Page</h2>
+<h2 className='text-center text-3xl font-bold mt-28 mb-8 bg-gradient-to-r from-cyan-500 to-blue-800 text-transparent bg-clip-text'>Volunteer Details Page</h2>
 
 <div className=" bg-base-100 w-8/12 mx-auto shadow-xl px-7">
   <figure>

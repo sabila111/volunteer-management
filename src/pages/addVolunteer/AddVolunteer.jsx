@@ -67,7 +67,7 @@ const AddVolunteer = () => {
 
 
             <div className="  p-24">
-                <h2 className="text-3xl font-extrabold mb-4 text-center">Add Volunteer Need Post</h2>
+                <h2 className="text-3xl font-extrabold  text-center mt-10 mb-5">Add Volunteer Need Post</h2>
                 <form onSubmit={handleAddVolunteer}>
                     {/* form row 1 */}
                     {user ?
