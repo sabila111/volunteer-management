@@ -70,8 +70,8 @@ You have no volunteer need posts. Add one to see it here!
   <table className="sm:table-auto md:table lg:table w-full">
 
     <thead >
-      <tr className='font-bold  sm:text-base md:text-lg lg:text-xl '>
-        <th className="">Name</th>
+      <tr className='font-bold  sm:text-base md:text-lg lg:text-xl dark:text-white'>
+        <th >Name</th>
         <th>Email</th>
         <th>Status</th>
         <th>Button</th>
