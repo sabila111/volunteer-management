@@ -22,8 +22,8 @@ const AllVolunteer = () => {
     };
 
     return (
-        <div>
-            <h1 className="text-center text-3xl text-indigo-600 font-bold mt-8">----All Volunteer Need Posts----</h1>
+        <div className="container mx-auto">
+            <h1 className="text-2xl md:text-3xl lg:text-3xl font-extrabold bg-gradient-to-r from-cyan-400 to-indigo-700 pb-3 text-transparent bg-clip-text text-center pt-32 mb-7 ">All Volunteer Need Posts</h1>
 
             <div className="text-center mt-6">
                 <input
@@ -36,7 +36,7 @@ const AllVolunteer = () => {
             </div>
 
            
-            <div className="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-5 mt-10  mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10  place-items-center">
             {filteredVolunteers.length > 0 ? (
                     filteredVolunteers.map((volunteer) => (
                         <AllVolunteerCard key={volunteer._id} volunteer={volunteer}></AllVolunteerCard>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const VolunteerNowCard = ({volunteer}) => {
     const{postTitle, thumbnail, category, deadline, _id, description} = volunteer
     return (
-        <div className="p-5 rounded-xl bg-base-100  w-[300px] shadow-xl">
+        <div className="p-5 rounded-xl bg-base-100 h-[526px]  w-[300px] shadow-xl">
         <figure>
           <img
           className="w-full h-60 rounded-xl"
