@@ -70,7 +70,7 @@ You have no volunteer need posts. Add one to see it here!
   <table className="sm:table-auto md:table lg:table w-full">
 
     <thead >
-      <tr className='font-bold  sm:text-base md:text-lg lg:text-xl dark:text-white'>
+      <tr className='font-bold  text-base md:text-lg lg:text-xl dark:text-white'>
         <th >Name</th>
         <th>Email</th>
         <th>Status</th>
@@ -82,7 +82,7 @@ You have no volunteer need posts. Add one to see it here!
      
       {posts.map((post) => (
         <tr key={post._id}
-        className="text-xs sm:text-sm md:text-base lg:text-lg border-b"
+        className="text-xs text-center md:text-start lg:text-start sm:text-sm md:text-base lg:text-lg border-b"
         >
           <td className='font-semibold sm:text-base md:text-lg lg:text-lg '>{post.name}</td>
           <td className='font-semibold sm:text-base md:text-lg lg:text-lg '>{post.email}</td>
@@ -90,7 +90,7 @@ You have no volunteer need posts. Add one to see it here!
           <td className='font-semibold text-lg'>
             <div className="">
 
-            <button onClick={()=>handlePostDelete(post._id)} className="bg-gradient-to-r from-indigo-700 to-cyan-400 text-white sm:text-base md:text-lg lg:text-xl px-3 py-2 sm:px-4 sm:py-3 "><IoTrashBinOutline /></button>
+            <button onClick={()=>handlePostDelete(post._id)} className="bg-gradient-to-r from-indigo-700 to-cyan-400 text-white text-base px-2 py-1 md:px-3 md:py-2 lg:px-4 lg:py-3 md:text-lg lg:text-xl "><IoTrashBinOutline /></button>
 
             </div>
           </td>
