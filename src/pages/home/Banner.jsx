@@ -1,7 +1,7 @@
 
 const Banner = () => {
     return (
-        <div className="carousel w-full h-96 mt-6">
+        <div className="carousel w-full h-[400px] mt-20 inset-0 bg-black bg-opacity-50">
         <div id="slide1" className="carousel-item relative w-full">
           <img
             src="https://i.ibb.co.com/Tq1MntK/medium.jpg"
@@ -56,7 +56,7 @@ const Banner = () => {
         </div>
         <div id="slide4" className="carousel-item relative w-full">
           <img
-            src="https://i.ibb.co.com/nRL02r5/images-5.jpg"
+            src="https://i.ibb.co.com/SXpmjyCV/The-Career-Benefits-of-Volunteering-During-Your-Job-Search-2.jpg"
             className="w-full" />
           <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
             <a href="#slide3" className="btn btn-circle">❮</a>

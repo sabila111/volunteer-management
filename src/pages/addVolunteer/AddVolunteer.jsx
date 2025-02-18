@@ -74,19 +74,19 @@ const AddVolunteer = () => {
                         <div className="md:flex mb-6">
                             <div className="form-control md:w-1/2">
                                 <label className="label">
-                                    <span className="label-text">Name</span>
+                                    <span className="label-text text-black dark:text-white">Name</span>
                                 </label>
                                 <label className="input-group">
-                                    <input readOnly value={user.displayName || 'No Name'} type="text" name="organizer_name" placeholder="name" className="input input-bordered w-full" />
+                                    <input readOnly value={user.displayName || 'No Name'} type="text" name="organizer_name" placeholder="name" className="input input-bordered w-full text-black dark:text-black" />
                                 </label>
                             </div>
 
                             <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text text-black dark:text-white">Email</span>
                                 </label>
                                 <label className="input-group">
-                                    <input readOnly value={user.email} type="email" name="organizer_email" placeholder="email" className="input input-bordered w-full" />
+                                    <input readOnly value={user.email} type="email" name="organizer_email" placeholder="email" className="input input-bordered w-full text-black dark:text-black" />
                                 </label>
                             </div>
 
@@ -100,7 +100,7 @@ const AddVolunteer = () => {
                     <div className="md:flex mb-6">
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text">Post Title</span>
+                                <span className="label-text text-black dark:text-white">Post Title</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="postTitle" placeholder="Post Title" className="input input-bordered w-full" />
@@ -109,7 +109,7 @@ const AddVolunteer = () => {
 
                         <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4">
                             <label className="label">
-                                <span className="label-text">Category</span>
+                                <span className="label-text text-black dark:text-white">Category</span>
                             </label>
                             <label className="input-group">
                                 <input list="dropdown-options" id="options" name="category" placeholder="Category" className="input input-bordered w-full" />
@@ -129,7 +129,7 @@ const AddVolunteer = () => {
                     <div className="md:flex mb-6">
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text">Location</span>
+                                <span className="label-text text-black dark:text-white">Location</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="location" placeholder="Location" className="input input-bordered w-full" />
@@ -138,7 +138,7 @@ const AddVolunteer = () => {
 
                         <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4">
                             <label className="label">
-                                <span className="label-text">Description</span>
+                                <span className="label-text text-black dark:text-white">Description</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="description" placeholder="description" className="input input-bordered w-full" />
@@ -154,7 +154,7 @@ const AddVolunteer = () => {
 
                         <div className="form-control md:w-1/2 ">
                             <label className="label">
-                                <span className="label-text">Volunteers Needed </span>
+                                <span className="label-text text-black dark:text-white">Volunteers Needed </span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="volunteersNeeded" placeholder="Volunteers Needed " className="input input-bordered w-full" />
@@ -163,7 +163,7 @@ const AddVolunteer = () => {
 
                         <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4 ">
                             <label className="label">
-                                <span className="label-text">Deadline </span>
+                                <span className="label-text text-black dark:text-white">Deadline </span>
                             </label>
 
                             <DatePicker
@@ -180,7 +180,7 @@ const AddVolunteer = () => {
 
                         <div className="form-control md:w-full ">
                             <label className="label">
-                                <span className="label-text">Thumbnail </span>
+                                <span className="label-text text-black dark:text-white">Thumbnail </span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="thumbnail" placeholder="Thumbnail " className="input input-bordered w-full" />
