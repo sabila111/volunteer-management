@@ -13,6 +13,7 @@ import VolunteerNeedDetails from "../pages/details/VolunteerNeedDetails";
 import BeVolunteer from "../pages/beAVolunteer/BeVolunteer";
 import ManagePost from "../pages/managePost/ManagePost";
 import UpdatePost from "../pages/managePost/UpdatePost";
+import GetInvolved from "../pages/involve/GetInvolved";
 
     const router = createBrowserRouter([
         {
@@ -23,6 +24,10 @@ import UpdatePost from "../pages/managePost/UpdatePost";
             {
               path: "/",
               element:<Home></Home> ,
+            },
+            {
+              path: "/involve",
+              element:<GetInvolved></GetInvolved> ,
             },
             {
               path: "allVolunteerNeed",

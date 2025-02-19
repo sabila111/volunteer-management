@@ -40,6 +40,7 @@ const Navbar = () => {
     const links = <>
         <li className="text-white"><NavLink to='/' className={`dark:text-white`}>Home</NavLink></li>
         <li className="text-white"><NavLink to='/allVolunteerNeed' className={`dark:text-white`}>All volunteer Need posts</NavLink></li>
+        <li className="text-white"><NavLink to='/involve' className={`dark:text-white`}>Get Involve</NavLink></li>
 
     </>
 
