@@ -1,8 +1,14 @@
+import { Helmet } from "react-helmet";
 import { FaHandsHelping, FaChalkboardTeacher, FaHandHoldingHeart, FaUsers } from "react-icons/fa";
 
 const GetInvolved = () => {
   return (
     <section className="py-16 ">
+         <Helmet>
+
+<title>KindHive||GetInvolved</title>
+</Helmet>
+
       {/* Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-indigo-700 pb-1 text-transparent bg-clip-text text-center pt-14 mb-5">Get Involved</h2>
