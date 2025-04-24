@@ -16,7 +16,7 @@ const VolunteerNowCard = ({volunteer}) => {
     
           <p className="text-md h-12 mb-4 text-black dark:text-black">
   {description.length > 50 ? `${description.slice(0, 50)}...` : description}
-</p>
+          </p>
           <div className="">
             <Link to={`/volunteerNeedDetails/${volunteer._id}`}><button className="px-4 py-3 rounded-xl bg-gradient-to-r from-indigo-700 to-cyan-400 text-white font-bold">View Details</button></Link>
           </div>
