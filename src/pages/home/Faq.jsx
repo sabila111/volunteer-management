@@ -1,8 +1,8 @@
 
 const Faq = () => {
     return (
-       <div className="my-16 max-w-7xl mx-auto">
- <h2 className="text-center text-2xl md:text-4xl lg:text-4xl font-bold mb-10">Frequently Asked Questions</h2>
+       <div className="mt-20 mb-5 max-w-7xl mx-auto">
+ <h2 className="text-center text-2xl md:text-4xl lg:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-indigo-700  text-transparent bg-clip-text pb-4 mt-10 mb-5">Frequently Asked Questions</h2>
 <div className="join join-vertical w-full">
         <div className="collapse collapse-arrow join-item border-base-300 border">
             <input type="radio" name="my-accordion-4" defaultChecked />

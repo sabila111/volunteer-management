@@ -68,27 +68,27 @@ const handleAddVolunteer = e => {
 </Helmet>
 
 
-<div className="bg-gradient-to-r from-indigo-700 to-cyan-400  p-24">
-       <h2 className="text-3xl font-extrabold mb-4 text-center">Add Volunteer Need Post</h2>
+<div className="p-14 md:p-20 lg:p-24">
+       <h2 className="text-3xl font-extrabold bg-gradient-to-r from-cyan-400 to-indigo-700 pb-1 text-transparent bg-clip-text text-center mt-10 mb-5">Update Volunteer Need Post</h2>
        <form onSubmit={handleAddVolunteer}>
            {/* form row 1 */}
            {user? 
-           <div className="md:flex mb-6">
+           <div className="md:flex mb-1 md:mb-6 lg:mb-6">
            <div className="form-control md:w-1/2">
                <label className="label">
-                   <span className="label-text">Name</span>
+                   <span className="label-text text-black dark:text-white">Name</span>
                </label>
                <label className="input-group">
-                   <input readOnly value={user.displayName || 'No Name'} type="text" name="organizer_name" placeholder="name" className="input input-bordered w-full" />
+                   <input readOnly value={user.displayName || 'No Name'} type="text" name="organizer_name" placeholder="name" className="input input-bordered w-full text-black dark:text-black" />
                </label>
            </div>
 
            <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4">
                <label className="label">
-                   <span className="label-text">Email</span>
+                   <span className="label-text  text-black dark:text-white">Email</span>
                </label>
                <label className="input-group">
-                   <input readOnly value={user.email} type="email" name="organizer_email" placeholder="email" className="input input-bordered w-full" />
+                   <input readOnly value={user.email} type="email" name="organizer_email" placeholder="email" className="input input-bordered w-full text-black dark:text-black" />
                </label>
            </div>
 
@@ -99,22 +99,22 @@ const handleAddVolunteer = e => {
            
 
            {/* form row 2 */}
-           <div className="md:flex mb-6">
+           <div className="md:flex mb-1 md:mb-6 lg:mb-6">
                <div className="form-control md:w-1/2">
                    <label className="label">
-                       <span className="label-text">Post Title</span>
+                       <span className="label-text text-black dark:text-white">Post Title</span>
                    </label>
                    <label className="input-group">
-                       <input type="text" name="postTitle" defaultValue={postTitle} placeholder="Post Title" className="input input-bordered w-full" />
+                       <input type="text" name="postTitle" defaultValue={postTitle} placeholder="Post Title" className="input input-bordered w-full text-black dark:text-black" />
                    </label>
                </div>
 
                <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4">
                    <label className="label">
-                       <span className="label-text">Category</span>
+                       <span className="label-text text-black dark:text-white" >Category</span>
                    </label>
                    <label className="input-group">
-                       <input list="dropdown-options" id="options" name="category" placeholder="Category" defaultValue={category} className="input input-bordered w-full" />
+                       <input list="dropdown-options" id="options" name="category" placeholder="Category" defaultValue={category} className="input input-bordered w-full text-black dark:text-black" />
                        <datalist id="dropdown-options">
                            <option value="healthcare" />
                            <option value="education" />
@@ -128,22 +128,22 @@ const handleAddVolunteer = e => {
 
            </div>
            {/* form row 3 */}
-           <div className="md:flex mb-6">
+           <div className="md:flex mb-1 md:mb-6 lg:mb-6">
                <div className="form-control md:w-1/2">
                    <label className="label">
-                       <span className="label-text">Location</span>
+                       <span className="label-text text-black dark:text-white">Location</span>
                    </label>
                    <label className="input-group">
-                       <input type="text" name="location" defaultValue={location} placeholder="Location" className="input input-bordered w-full"/>
+                       <input type="text" name="location" defaultValue={location} placeholder="Location" className="input input-bordered w-full text-black dark:text-black"/>
                    </label>
                </div>
 
                <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4">
                    <label className="label">
-                       <span className="label-text">Description</span>
+                       <span className="label-text text-black dark:text-white">Description</span>
                    </label>
                    <label className="input-group">
-                       <input type="text" name="description" defaultValue={description} placeholder="description" className="input input-bordered w-full" />
+                       <input type="text" name="description" defaultValue={description} placeholder="description" className="input input-bordered w-full text-black dark:text-black" />
                    </label>
                </div>
 
@@ -152,24 +152,24 @@ const handleAddVolunteer = e => {
 
            {/* form row 4 */}
 
-           <div className="md:flex mb-6">
+           <div className="md:flex mb-1 md:mb-6 lg:mb-6">
           
            <div className="form-control md:w-1/2 ">
                    <label className="label">
-                       <span className="label-text">Volunteers Needed </span>
+                       <span className="label-text text-black dark:text-white">Volunteers Needed </span>
                    </label>
                    <label className="input-group">
-                       <input type="text" name="volunteersNeeded" defaultValue={volunteersNeeded} placeholder="Volunteers Needed " className="input input-bordered w-full" />
+                       <input type="text" name="volunteersNeeded" defaultValue={volunteersNeeded} placeholder="Volunteers Needed " className="input input-bordered w-full text-black dark:text-black" />
                    </label>
                </div>
 
                <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4 ">
                    <label className="label">
-                       <span className="label-text">Deadline </span>
+                       <span className="label-text text-black dark:text-white">Deadline </span>
                    </label>
                    
                    <DatePicker
-           className='border p-3 w-full rounded-md'
+           className='border p-3 w-full rounded-md text-black dark:text-black'
            selected={startDate}
            onChange={date => setStartDate(date)}
          />
@@ -178,21 +178,21 @@ const handleAddVolunteer = e => {
 
            </div>
 
-           <div className="md:flex mb-6">
+           <div className="md:flex mb-1 md:mb-6 lg:mb-6">
           
           <div className="form-control md:w-full ">
                   <label className="label">
-                      <span className="label-text">Thumbnail </span>
+                      <span className="label-text text-black dark:text-white">Thumbnail </span>
                   </label>
                   <label className="input-group">
-                      <input type="text" name="thumbnail" defaultValue={thumbnail} placeholder="Thumbnail " className="input input-bordered w-full" />
+                      <input type="text" name="thumbnail" defaultValue={thumbnail} placeholder="Thumbnail " className="input input-bordered w-full text-black dark:text-black" />
                   </label>
               </div>
 
 
           </div>
            
-           <input type="submit" value="Update Post" className="btn btn-block bg-black text-white mt-6 " />
+           <input type="submit" value="Update Post" className="btn btn-block bg-gradient-to-r from-indigo-700 to-cyan-400 text-white mt-6 " />
        </form>
    </div>
 

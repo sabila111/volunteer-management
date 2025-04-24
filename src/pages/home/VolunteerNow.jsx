@@ -18,8 +18,8 @@ const VolunteerNow = () => {
     },[])
 
     return (
-        <div >
-            <div className="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-5 mt-10">
+        <div className="container mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10  place-items-center">
             
             {
 volunteers.map(volunteer=> <VolunteerNowCard key={volunteer._id} volunteer={volunteer}></VolunteerNowCard>)

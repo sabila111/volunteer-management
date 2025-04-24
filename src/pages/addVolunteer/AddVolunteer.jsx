@@ -9,6 +9,11 @@ const AddVolunteer = () => {
 
     const { user } = useContext(AuthContext)
     const [startDate, setStartDate] = useState(new Date())
+    const handleDateChange = (date) => {
+        const formattedDate = date.toISOString().split("T")[0];
+        setStartDate(formattedDate); 
+    };
+    
 
     const handleAddVolunteer = e => {
 
@@ -66,27 +71,27 @@ const AddVolunteer = () => {
             </Helmet>
 
 
-            <div className="bg-gradient-to-r from-indigo-700 to-cyan-400  p-24">
-                <h2 className="text-3xl font-extrabold mb-4 text-center">Add Volunteer Need Post</h2>
+            <div className=" p-14 md:p-20 lg:p-24">
+                <h2 className="text-3xl font-extrabold bg-gradient-to-r from-cyan-400 to-indigo-700 pb-1 text-transparent bg-clip-text text-center mt-10 mb-5">Add Volunteer Need Post</h2>
                 <form onSubmit={handleAddVolunteer}>
                     {/* form row 1 */}
                     {user ?
-                        <div className="md:flex mb-6">
+                        <div className="md:flex mb-1 md:mb-6 lg:mb-6">
                             <div className="form-control md:w-1/2">
                                 <label className="label">
-                                    <span className="label-text">Name</span>
+                                    <span className="label-text text-black dark:text-white">Name</span>
                                 </label>
                                 <label className="input-group">
-                                    <input readOnly value={user.displayName || 'No Name'} type="text" name="organizer_name" placeholder="name" className="input input-bordered w-full" />
+                                    <input readOnly value={user.displayName || 'No Name'} type="text" name="organizer_name" placeholder="name" className="input input-bordered w-full text-black dark:text-black" />
                                 </label>
                             </div>
 
                             <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text text-black dark:text-white">Email</span>
                                 </label>
                                 <label className="input-group">
-                                    <input readOnly value={user.email} type="email" name="organizer_email" placeholder="email" className="input input-bordered w-full" />
+                                    <input readOnly value={user.email} type="email" name="organizer_email" placeholder="email" className="input input-bordered w-full text-black dark:text-black" />
                                 </label>
                             </div>
 
@@ -97,22 +102,22 @@ const AddVolunteer = () => {
 
 
                     {/* form row 2 */}
-                    <div className="md:flex mb-6">
+                    <div className="md:flex mb-1 md:mb-6 lg:mb-6">
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text">Post Title</span>
+                                <span className="label-text text-black dark:text-white">Post Title</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="postTitle" placeholder="Post Title" className="input input-bordered w-full" />
+                                <input type="text" name="postTitle" placeholder="Post Title" className="input input-bordered w-full text-black dark:text-black" />
                             </label>
                         </div>
 
                         <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4">
                             <label className="label">
-                                <span className="label-text">Category</span>
+                                <span className="label-text text-black dark:text-white">Category</span>
                             </label>
                             <label className="input-group">
-                                <input list="dropdown-options" id="options" name="category" placeholder="Category" className="input input-bordered w-full" />
+                                <input list="dropdown-options" id="options" name="category" placeholder="Category" className="input input-bordered w-full text-black dark:text-black" />
                                 <datalist id="dropdown-options">
                                     <option value="healthcare" />
                                     <option value="education" />
@@ -126,22 +131,22 @@ const AddVolunteer = () => {
 
                     </div>
                     {/* form row 3 */}
-                    <div className="md:flex mb-6">
+                    <div className="md:flex mb-1 md:mb-6 lg:mb-6">
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text">Location</span>
+                                <span className="label-text text-black dark:text-white">Location</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="location" placeholder="Location" className="input input-bordered w-full" />
+                                <input type="text" name="location" placeholder="Location" className="input input-bordered w-full text-black dark:text-black" />
                             </label>
                         </div>
 
                         <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4">
                             <label className="label">
-                                <span className="label-text">Description</span>
+                                <span className="label-text text-black dark:text-white">Description</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="description" placeholder="description" className="input input-bordered w-full" />
+                                <input type="text" name="description" placeholder="description" className="input input-bordered w-full text-black dark:text-black" />
                             </label>
                         </div>
 
@@ -150,47 +155,48 @@ const AddVolunteer = () => {
 
                     {/* form row 4 */}
 
-                    <div className="md:flex mb-6">
+                    <div className="md:flex mb-1 md:mb-6 lg:mb-6">
 
                         <div className="form-control md:w-1/2 ">
                             <label className="label">
-                                <span className="label-text">Volunteers Needed </span>
+                                <span className="label-text text-black dark:text-white">Volunteers Needed </span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="volunteersNeeded" placeholder="Volunteers Needed " className="input input-bordered w-full" />
+                                <input type="text" name="volunteersNeeded" placeholder="Volunteers Needed " className="input input-bordered w-full text-black dark:text-black" />
                             </label>
                         </div>
 
                         <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4 ">
                             <label className="label">
-                                <span className="label-text">Deadline </span>
+                                <span className="label-text text-black dark:text-white">Deadline </span>
                             </label>
 
                             <DatePicker
-                                className='border p-3 w-full rounded-md'
-                                selected={startDate}
-                                onChange={date => setStartDate(date)}
+                                className='border p-3 w-full rounded-md text-black dark:text-black'
+                                selected={new Date(startDate)}
+                                onChange={handleDateChange}
+                                dateFormat="yyyy-MM-dd"
                             />
                         </div>
 
 
                     </div>
 
-                    <div className="md:flex mb-6">
+                    <div className="md:flex mb-1 md:mb-6 lg:mb-6">
 
                         <div className="form-control md:w-full ">
                             <label className="label">
-                                <span className="label-text">Thumbnail </span>
+                                <span className="label-text text-black dark:text-white">Thumbnail </span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="thumbnail" placeholder="Thumbnail " className="input input-bordered w-full" />
+                                <input type="text" name="thumbnail" placeholder="Thumbnail " className="input input-bordered w-full text-black dark:text-black" />
                             </label>
                         </div>
 
 
                     </div>
 
-                    <input type="submit" value="Add Post" className="btn btn-block bg-black text-white mt-6 " />
+                    <input type="submit" value="Add Post" className="btn btn-block bg-gradient-to-r from-indigo-700 to-cyan-400 text-white mt-6 " />
                 </form>
             </div>
 

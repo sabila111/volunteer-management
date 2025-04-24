@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import VolunteerNow from "./VolunteerNow";
 import News from "./News";
 import Faq from "./Faq";
+import Testimonials from "./Testimonials";
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
 <Banner></Banner>
 <VolunteerNow></VolunteerNow>
 <Faq></Faq>
+<Testimonials></Testimonials>
 <News></News>
         </div>
     );
