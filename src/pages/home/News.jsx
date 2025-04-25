@@ -8,7 +8,7 @@ const News = () => {
            
                     <form className="flex justify-center gap-5 my-5">
                     <input className="bg-gray-100 w-1/2 p-5 rounded-xl" type="email" placeholder="email" required />
-                    <button className="px-4 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-indigo-700 to-cyan-400 ">SUBSCRIBE</button>
+                    <button className="px-4 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-indigo-700 to-cyan-400 text-sm lg:text-base">SUBSCRIBE</button>
                     </form>
                
             </div>
