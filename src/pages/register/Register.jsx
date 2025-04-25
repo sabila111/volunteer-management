@@ -79,40 +79,40 @@ const Register = () => {
   }
 
   return (
-    <div className="min-h-screen mt-24 ">
+    <div className="min-h-screen pt-24 ">
       <div className="hero-content flex-col lg:flex-row-reverse gap-52">
         
         <div className="card  w-full max-w-sm shrink-0 ">
-          <h1 className="text-5xl font-bold ml-8 mt-8 ">Register now</h1>
+          <h1 className="text-5xl font-bold ml-8 mt-8 bg-gradient-to-r from-cyan-400 to-indigo-700 pb-3 text-transparent bg-clip-text text-center">Register now</h1>
 
           <form onSubmit={handleRegister} className="card-body">
 
             <div className="form-control ">
               <label className="label">
-                <span className="label-text text-base font-semibold">Name</span>
+                <span className="label-text text-base font-semibold text-black dark:text-white">Name</span>
               </label>
               <input type="text" placeholder="name" name="name" className="input input-bordered" required />
             </div>
 
             <div className="form-control">
               <label className="label">
-                <span className="label-text text-base font-semibold">Email</span>
+                <span className="label-text text-base font-semibold text-black dark:text-white">Email</span>
               </label>
               <input type="email" placeholder="email" name="email" className="input input-bordered" required />
             </div>
 
             <div className="form-control">
               <label className="label">
-                <span className="label-text text-base font-semibold">Photo</span>
+                <span className="label-text text-base font-semibold text-black dark:text-white">Photo</span>
               </label>
               <input type="text" placeholder="photo url" name="photoURL" className="input input-bordered" required />
             </div>
 
             <div className="form-control relative">
               <label className="label">
-                <span className="label-text text-base font-semibold">Password</span>
+                <span className="label-text text-base font-semibold text-black dark:text-white">Password</span>
               </label>
-              <input type={showPassword ? 'text' : "password"} placeholder="password" name="password" className="input input-bordered" required />
+              <input type={showPassword ? 'text' : "password"} placeholder="password" name="password" className="input input-bordered text-black dark:text-black" required />
               <button
                 onClick={() => setShowPassword(!showPassword)}
                 className="btn btn-xs absolute right-4 top-[52px]"
@@ -146,7 +146,7 @@ const Register = () => {
           </div>
 
 
-          <p className="text-center mt-4">Already have an account? Please <Link className="text-white font-bold" to={'/login'}>Login</Link></p>
+          <p className="text-center mt-4">Already have an account? Please <Link className="bg-gradient-to-r from-cyan-400 to-indigo-700 pb-3 text-transparent bg-clip-text text-center font-bold" to={'/login'}>Login</Link></p>
 
         </div>
 

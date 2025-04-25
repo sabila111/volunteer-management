@@ -51,26 +51,26 @@ const Login = () => {
   }
 
   return (
-    <div className="pt-10 pb-10 mt-20 ">
+    <div className=" pb-10 pt-20 ">
       <div className="hero-content flex-col lg:flex-row-reverse gap-52">
     
         <div className="card  w-full max-w-sm shrink-0 ">
-          <h1 className="text-5xl font-bold ml-8 mt-8 ">Login now</h1>
+          <h1 className="text-5xl font-bold ml-8 mt-8 bg-gradient-to-r from-cyan-400 to-indigo-700 pb-3 text-transparent bg-clip-text text-center">Login now</h1>
 
           <form onSubmit={handleLogin} className="card-body">
 
             <div className="form-control">
               <label className="label">
-                <span className="label-text text-base font-semibold">Email</span>
+                <span className="label-text text-base font-semibold text-black dark:text-white">Email</span>
               </label>
               <input type="email" placeholder="email" name="email" className="input input-bordered" required />
             </div>
 
             <div className="form-control relative">
               <label className="label">
-                <span className="label-text text-base font-semibold">Password</span>
+                <span className="label-text text-base font-semibold text-black dark:text-white">Password</span>
               </label>
-              <input type='password' placeholder="password" name="password" className="input input-bordered" required />
+              <input type='password' placeholder="password" name="password" className="input input-bordered text-black dark:text-black" required />
             </div>
             <div className=" mt-5">
               <button className="px-4 py-3 rounded-lg  bg-gradient-to-r from-cyan-400 to-indigo-700 text-white">Login</button>
@@ -93,7 +93,7 @@ const Login = () => {
           </div>
 
 
-          <p className="text-center mt-4">Don't have an account? Please <Link className="text-white font-bold" to={'/register'}>Register</Link></p>
+          <p className="text-center mt-4">Don't have an account? Please <Link className="bg-gradient-to-r from-cyan-400 to-indigo-700 pb-3 text-transparent bg-clip-text text-center font-bold " to={'/register'}>Register</Link></p>
 
         </div>
 
