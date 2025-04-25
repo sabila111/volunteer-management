@@ -4,7 +4,7 @@
 KindHive is a volunteer management platform designed to connect organizers with volunteers. It enables users to create, manage, and participate in volunteer opportunities effortlessly.  
 
 ## Screenshots
-![Kind Hive Screentshot] (https://i.ibb.co.com/LXq3b5rx/Screenshot-2025-02-05-195133.png)
+![Kind Hive Screentshot](https://i.ibb.co.com/LXq3b5rx/Screenshot-2025-02-05-195133.png)
 
 ## **Live URL**  
 https://volunteer-management.surge.sh/  
