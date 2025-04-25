@@ -9,8 +9,7 @@ const BeVolunteer = () => {
     return (
         <div>
             <Helmet>
-
-                <title>KindHive |Be a Volunteer</title>
+                <title>KindHive|Be a Volunteer</title>
             </Helmet>
             {
                 volunteers.map(volunteer => <BeVolunteerInput key={volunteer._id} volunteer={volunteer}></BeVolunteerInput>)
