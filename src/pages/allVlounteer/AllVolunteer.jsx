@@ -48,7 +48,7 @@ const AllVolunteer = () => {
                 <select
                     value={sortOrder}
                     onChange={handleSortChange}
-                    className="border rounded p-2 w-full md:w-1/3"
+                    className="border rounded p-2 w-full md:w-1/3 text-black dark:text-black"
                 >
                     <option value="asc">Sort by Volunteers Needed (Ascending)</option>
                     <option value="desc">Sort by Volunteers Needed (Descending)</option>
