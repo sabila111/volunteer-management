@@ -10,10 +10,10 @@ const BeVolunteer = () => {
         <div>
             <Helmet>
 
-<title>KindHive |Be a Volunteer</title>
-</Helmet>
+                <title>KindHive |Be a Volunteer</title>
+            </Helmet>
             {
-                volunteers.map(volunteer=> <BeVolunteerInput key={volunteer._id} volunteer={volunteer}></BeVolunteerInput>)
+                volunteers.map(volunteer => <BeVolunteerInput key={volunteer._id} volunteer={volunteer}></BeVolunteerInput>)
             }
         </div>
     );
