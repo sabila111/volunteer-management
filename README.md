@@ -27,7 +27,7 @@ KindHive is a volunteer management platform designed to connect organizers with 
   - Meaningful error handling for empty data scenarios.  
   - Dynamic page titles using `react-helmet`.  
 
-## **NPM Packages Used**  
+## **Tech stack Used**  
 Here are the key npm packages used in the project:  
 1. **React Router Dom**  
    - For handling routing and dynamic URL-based navigation.  
