@@ -7,6 +7,7 @@ const MainLayout = () => {
         <div className="dark:bg-gray-900  text-black dark:text-white">
             <div className="">
                 <Navbar></Navbar>
+    
             </div>
             <div className=" max-w-7xl mx-auto">
             <Outlet></Outlet>
