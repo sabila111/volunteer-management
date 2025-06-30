@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import useAdmin from '../hooks/useAdmin';
+import { Helmet } from 'react-helmet';
 
 const DashboardLayout = () => {
   const { user } = useContext(AuthContext);
@@ -10,6 +11,12 @@ const DashboardLayout = () => {
 
   return (
     <div className="flex min-h-screen relative">
+
+<Helmet>
+
+<title>KindHive |  Dashboard</title>
+</Helmet>
+
       {/* Sidebar */}
       <div
         className={`fixed inset-y-0 left-0 h-full bg-gradient-to-r from-indigo-700 to-cyan-400 text-white p-4 transition-transform duration-300 z-40 ${
@@ -65,21 +72,28 @@ const DashboardLayout = () => {
                 className="block hover:underline"
                 onClick={() => setIsOpen(false)}
               >
-                My
+                My Profile
               </Link>
               <Link
-                to="/dashboard/user/add-post"
+                to="/dashboard/addVolunteerNeed"
                 className="block hover:underline"
                 onClick={() => setIsOpen(false)}
               >
                 Add Volunteer Need Post
               </Link>
               <Link
-                to="/dashboard/user/manage-posts"
+                to="/dashboard/myVolunteerNeed"
                 className="block hover:underline mb-5"
                 onClick={() => setIsOpen(false)}
               >
-                Manage My Posts
+                My Volunteer Need Posts
+              </Link>
+              <Link
+                to="/dashboard/myVolunteerRequest"
+                className="block hover:underline mb-5"
+                onClick={() => setIsOpen(false)}
+              >
+                My Volunteer Request Posts
               </Link>
             </>
           )}
