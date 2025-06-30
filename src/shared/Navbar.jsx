@@ -112,6 +112,14 @@ const Navbar = () => {
                                                 >
                                                     Manage My Posts
                                                 </NavLink>
+                                                <NavLink to='/dashboard'
+                                                    className={({ isActive }) =>
+                                                        `block py-2 text-black text-center rounded-lg font-bold ${isActive ? 'bg-gradient-to-r from-cyan-400 to-indigo-700 text-white' : 'hover:bg-gray-100'
+                                                        }`
+                                                    }
+                                                >
+                                                  Dashboard
+                                                </NavLink>
 
 
 

@@ -1,6 +1,6 @@
 import {
-    createBrowserRouter,
-  } from "react-router-dom";
+  createBrowserRouter,
+} from "react-router-dom";
 import MainLayout from "../mainLayout/MainLayout";
 import Home from "../pages/home/Home";
 import Error from "../eroor/Error";
@@ -14,61 +14,78 @@ import BeVolunteer from "../pages/beAVolunteer/BeVolunteer";
 import ManagePost from "../pages/managePost/ManagePost";
 import UpdatePost from "../pages/managePost/UpdatePost";
 import GetInvolved from "../pages/involve/GetInvolved";
+import Dashboard from "../dashboard/Dashboard";
+import UserProfile from "../dashboard/userDahboard/UserProfile";
+import AdminProfile from "../dashboard/adminDashboard/AdminProfile";
 
-    const router = createBrowserRouter([
-        {
-          path: "/",
-          element:<MainLayout></MainLayout>,
-          errorElement:<Error></Error>,
-          children: [
-            {
-              path: "/",
-              element:<Home></Home> ,
-            },
-            {
-              path: "/involve",
-              element:<GetInvolved></GetInvolved> ,
-            },
-            {
-              path: "allVolunteerNeed",
-              element:<AllVolunteer></AllVolunteer> ,
-              loader : ()=> fetch('https://assignment-11-server-delta-bice.vercel.app/volunteer')
-            },
-            {
-              path: "addVolunteerNeed",
-              element:<PrivateRoute><AddVolunteer></AddVolunteer></PrivateRoute> ,
-            },
-            {
-              path: "volunteerNeedDetails/:id",
-              element:<PrivateRoute> <VolunteerNeedDetails></VolunteerNeedDetails></PrivateRoute> ,
-              loader: ({params})=> fetch(`https://assignment-11-server-delta-bice.vercel.app/volunteer/${params.id}`)
-            },
-            {
-              path: "beVolunteer/:id",
-              element:<PrivateRoute> <BeVolunteer></BeVolunteer></PrivateRoute> ,
-              loader: ({params})=> fetch(`https://assignment-11-server-delta-bice.vercel.app/volunteer/${params.id}`)
-            },
-            {
-              path: "/manage",
-              element:<PrivateRoute><ManagePost></ManagePost></PrivateRoute> ,
-              loader : ()=> fetch('https://assignment-11-server-delta-bice.vercel.app/volunteer-application')
-            },
-            {
-              path: "/manage/update/:id",
-              element:<PrivateRoute><UpdatePost></UpdatePost></PrivateRoute> ,
-              loader : ({params})=> fetch(`https://assignment-11-server-delta-bice.vercel.app/volunteer/${params.id}`)
-            },
-            {
-              path: "/login",
-              element:<Login></Login> ,
-            },
-            {
-              path: "/register",
-              element:<Register></Register> ,
-            },
-          ],
-        },
-      ]);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainLayout></MainLayout>,
+    errorElement: <Error></Error>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/involve",
+        element: <GetInvolved></GetInvolved>,
+      },
+      {
+        path: "allVolunteerNeed",
+        element: <AllVolunteer></AllVolunteer>,
+        loader: () => fetch('https://assignment-11-server-delta-bice.vercel.app/volunteer')
+      },
+      {
+        path: "addVolunteerNeed",
+        element: <PrivateRoute><AddVolunteer></AddVolunteer></PrivateRoute>,
+      },
+      {
+        path: "volunteerNeedDetails/:id",
+        element: <PrivateRoute> <VolunteerNeedDetails></VolunteerNeedDetails></PrivateRoute>,
+        loader: ({ params }) => fetch(`https://assignment-11-server-delta-bice.vercel.app/volunteer/${params.id}`)
+      },
+      {
+        path: "beVolunteer/:id",
+        element: <PrivateRoute> <BeVolunteer></BeVolunteer></PrivateRoute>,
+        loader: ({ params }) => fetch(`https://assignment-11-server-delta-bice.vercel.app/volunteer/${params.id}`)
+      },
+      {
+        path: "/manage",
+        element: <PrivateRoute><ManagePost></ManagePost></PrivateRoute>,
+        loader: () => fetch('https://assignment-11-server-delta-bice.vercel.app/volunteer-application')
+      },
+      {
+        path: "/manage/update/:id",
+        element: <PrivateRoute><UpdatePost></UpdatePost></PrivateRoute>,
+        loader: ({ params }) => fetch(`https://assignment-11-server-delta-bice.vercel.app/volunteer/${params.id}`)
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+    ],
+  },
+  {
+    path: 'dashboard',
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+    children: [
+      {
+        path: "userProfile",
+        element: <UserProfile></UserProfile>,
+      },
+      {
+        path: "adminProfile",
+        element: <AdminProfile></AdminProfile>,
+      },
+    ]
+  }
+]);
 
 
 export default router;
