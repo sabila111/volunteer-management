@@ -77,7 +77,7 @@ const DashboardLayout = () => {
                                 className="block hover:underline"
                                 onClick={() => setIsOpen(false)}
                             >
-                                My 
+                                My Profile
                             </Link>
                             <Link
                                 to="/dashboard/addVolunteerNeed"
