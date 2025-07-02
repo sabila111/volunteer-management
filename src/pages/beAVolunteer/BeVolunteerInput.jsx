@@ -16,12 +16,14 @@ const BeVolunteerInput = ({ volunteer }) => {
         const name = form.name.value
         const email = form.email.value
         const suggestion = form.suggestion.value
+        const postTitle = form.postTitle.value
+        const category = form.category.value
 
-        const addReview = { name, email, suggestion, status: "requested", postId:id, }
+        const addReview = { name, email, suggestion, status: "requested", postId:id, postTitle, category}
         console.log(addReview)
 
 
-        fetch('https://assignment-11-server-delta-bice.vercel.app/volunteer-application', {
+        fetch('http://localhost:5000/volunteer-application', {
                 method:'POST',
                 headers:{
                     'content-type' : 'application/json'
@@ -87,7 +89,7 @@ const BeVolunteerInput = ({ volunteer }) => {
                             <span className="label-text text-black dark:text-white">Post Title</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" readOnly value={postTitle} name="post" placeholder="Post Title" className="input input-bordered w-full" />
+                            <input type="text" readOnly value={postTitle} name="postTitle" placeholder="Post Title" className="input input-bordered w-full" />
                         </label>
                     </div>
 

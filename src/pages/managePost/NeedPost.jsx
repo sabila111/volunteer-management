@@ -17,7 +17,7 @@ const NeedPost = () => {
 
   useEffect(() => {
    
-    fetch("https://assignment-11-server-delta-bice.vercel.app/volunteer") 
+    fetch("http://localhost:5000/volunteer") 
       .then((res) => res.json())
       .then((data) => setPosts(data))
       .catch((err) => console.error(err));
@@ -37,7 +37,7 @@ const NeedPost = () => {
       }).then((result) => {
         if (result.isConfirmed) {
        
-    fetch(`https://assignment-11-server-delta-bice.vercel.app/volunteer/${id}`, {
+    fetch(`http://localhost:5000/volunteer/${id}`, {
         method:'DELETE'
         })
         .then(res => res.json())

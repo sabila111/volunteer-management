@@ -19,6 +19,9 @@ import UserProfile from "../dashboard/userDahboard/UserProfile";
 import AdminProfile from "../dashboard/adminDashboard/AdminProfile";
 import NeedPost from "../pages/managePost/NeedPost";
 import RequestPost from "../pages/managePost/RequestPost";
+import ManageAllPosts from "../dashboard/adminDashboard/ManageAllPosts";
+import ManageUsers from "../dashboard/adminDashboard/ManageUsers";
+import ManageVolunteers from "../dashboard/adminDashboard/ManageVolunteers";
 
 const router = createBrowserRouter([
   {
@@ -37,27 +40,27 @@ const router = createBrowserRouter([
       {
         path: "allVolunteerNeed",
         element: <AllVolunteer></AllVolunteer>,
-        loader: () => fetch('https://assignment-11-server-delta-bice.vercel.app/volunteer')
+        loader: () => fetch('http://localhost:5000/volunteer')
       },
       {
         path: "volunteerNeedDetails/:id",
         element: <PrivateRoute> <VolunteerNeedDetails></VolunteerNeedDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://assignment-11-server-delta-bice.vercel.app/volunteer/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/volunteer/${params.id}`)
       },
       {
         path: "beVolunteer/:id",
         element: <PrivateRoute> <BeVolunteer></BeVolunteer></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://assignment-11-server-delta-bice.vercel.app/volunteer/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/volunteer/${params.id}`)
       },
       {
         path: "/manage",
         element: <PrivateRoute><ManagePost></ManagePost></PrivateRoute>,
-        loader: () => fetch('https://assignment-11-server-delta-bice.vercel.app/volunteer-application')
+        loader: () => fetch('http://localhost:5000/volunteer-application')
       },
       {
         path: "/manage/update/:id",
         element: <PrivateRoute><UpdatePost></UpdatePost></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://assignment-11-server-delta-bice.vercel.app/volunteer/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/volunteer/${params.id}`)
       },
       {
         path: "/login",
@@ -89,9 +92,22 @@ const router = createBrowserRouter([
         path: "myVolunteerRequest",
         element: <PrivateRoute><RequestPost></RequestPost></PrivateRoute>,
       },
+      // admin routes
       {
         path: "adminProfile",
         element: <AdminProfile></AdminProfile>,
+      },
+      {
+        path: "manageUsers",
+        element: <ManageUsers></ManageUsers>,
+      },
+      {
+        path: "manageAllPosts",
+        element: <ManageAllPosts></ManageAllPosts>,
+      },
+      {
+        path: "manageVolunteers",
+        element: <ManageVolunteers></ManageVolunteers>,
       },
     ]
   }

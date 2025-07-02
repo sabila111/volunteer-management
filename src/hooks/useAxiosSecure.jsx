@@ -10,6 +10,7 @@ import { AuthContext } from "../provider/AuthProvider";
 const axiosSecure = axios.create({
     baseURL: 'http://localhost:5000/'
 })
+axiosSecure.defaults.withCredentials = true;
 const useAxiosSecure = () => {
     const navigate = useNavigate();
     const { logOut } = useContext(AuthContext);
