@@ -33,7 +33,7 @@ const handleAddVolunteer = e => {
             organizer_email, postTitle, category, location, description, thumbnail, volunteersNeeded, deadline
         }
         console.log(addReview)
-        fetch(`https://assignment-11-server-delta-bice.vercel.app/volunteer/${_id}`, {
+        fetch(`https://volunteer-management-server.onrender.com/volunteer/${_id}`, {
         method:'PUT',
         headers:{
             'content-type' : 'application/json'

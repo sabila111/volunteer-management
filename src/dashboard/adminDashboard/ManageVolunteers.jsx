@@ -52,7 +52,7 @@ const ManageVolunteers = () => {
   return (
     <div className="p-6">
       <h2 className="text-4xl font-bold mt-6 mb-14 text-center bg-gradient-to-r from-cyan-400 to-indigo-600 text-transparent bg-clip-text">
-        All Volunteer Requests
+    Manage Volunteer Requests
       </h2>
 
       <div className="overflow-x-auto shadow-lg rounded-lg">

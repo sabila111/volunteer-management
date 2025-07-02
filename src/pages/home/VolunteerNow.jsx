@@ -8,7 +8,7 @@ const VolunteerNow = () => {
     
     
     useEffect(()=>{
-        fetch('https://assignment-11-server-delta-bice.vercel.app/volunteer')
+        fetch('https://volunteer-management-server.onrender.com/volunteer')
         .then((res) => res.json())
         .then((data) =>{
             const sortedReview = data.sort((a, b) => b.rating - a.rating)

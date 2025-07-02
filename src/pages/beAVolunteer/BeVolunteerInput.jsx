@@ -23,7 +23,7 @@ const BeVolunteerInput = ({ volunteer }) => {
         console.log(addReview)
 
 
-        fetch('https://assignment-11-server-delta-bice.vercel.app/volunteer-application', {
+        fetch('https://volunteer-management-server.onrender.com/volunteer-application', {
                 method:'POST',
                 headers:{
                     'content-type' : 'application/json'
