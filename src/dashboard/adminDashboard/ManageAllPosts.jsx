@@ -17,7 +17,7 @@ const ManageAllPosts = () => {
     
       useEffect(() => {
        
-        fetch("https://assignment-11-server-delta-bice.vercel.app/volunteer") 
+        fetch("https://volunteer-management-server.onrender.com/volunteer") 
           .then((res) => res.json())
           .then((data) => setPosts(data))
           .catch((err) => console.error(err));
@@ -36,7 +36,7 @@ const ManageAllPosts = () => {
             }).then((result) => {
               if (result.isConfirmed) {
              
-          fetch(`https://assignment-11-server-delta-bice.vercel.app/volunteer/${id}`, {
+          fetch(`https://volunteer-management-server.onrender.com/volunteer/${id}`, {
               method:'DELETE'
               })
               .then(res => res.json())
