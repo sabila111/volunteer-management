@@ -8,7 +8,7 @@ import { AuthContext } from "../provider/AuthProvider";
 
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000/'
+    baseURL: 'https://assignment-11-server-delta-bice.vercel.app/'
 })
 axiosSecure.defaults.withCredentials = true;
 const useAxiosSecure = () => {
