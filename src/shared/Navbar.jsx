@@ -99,19 +99,7 @@ const Navbar = () => {
                                         {isDropdownOpen && (
                                             <div className="absolute -right-10 mt-2 w-48 bg-white shadow-md rounded-lg p-3 z-[100]">
                                                 <span className="block pb-2 text-center text-sm font-medium text-gray-700">{user.displayName}</span>
-                                                <NavLink to='/addVolunteerNeed' className={({ isActive }) =>
-                                                    `block py-2 text-black text-center rounded-lg font-bold ${isActive ? 'bg-gradient-to-r from-cyan-400 to-indigo-700 text-white' : 'hover:bg-gray-100'
-                                                    }`
-                                                }>Add Volunteer need Post</NavLink>
-
-                                                <NavLink to='/manage'
-                                                    className={({ isActive }) =>
-                                                        `block py-2 text-black text-center rounded-lg font-bold ${isActive ? 'bg-gradient-to-r from-cyan-400 to-indigo-700 text-white' : 'hover:bg-gray-100'
-                                                        }`
-                                                    }
-                                                >
-                                                    Manage My Posts
-                                                </NavLink>
+                                                
                                                 <NavLink to='/dashboard'
                                                     className={({ isActive }) =>
                                                         `block py-2 text-black text-center rounded-lg font-bold ${isActive ? 'bg-gradient-to-r from-cyan-400 to-indigo-700 text-white' : 'hover:bg-gray-100'

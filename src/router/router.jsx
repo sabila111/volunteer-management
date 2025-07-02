@@ -17,6 +17,11 @@ import GetInvolved from "../pages/involve/GetInvolved";
 import Dashboard from "../dashboard/Dashboard";
 import UserProfile from "../dashboard/userDahboard/UserProfile";
 import AdminProfile from "../dashboard/adminDashboard/AdminProfile";
+import NeedPost from "../pages/managePost/NeedPost";
+import RequestPost from "../pages/managePost/RequestPost";
+import ManageAllPosts from "../dashboard/adminDashboard/ManageAllPosts";
+import ManageUsers from "../dashboard/adminDashboard/ManageUsers";
+import ManageVolunteers from "../dashboard/adminDashboard/ManageVolunteers";
 
 const router = createBrowserRouter([
   {
@@ -36,10 +41,6 @@ const router = createBrowserRouter([
         path: "allVolunteerNeed",
         element: <AllVolunteer></AllVolunteer>,
         loader: () => fetch('https://assignment-11-server-delta-bice.vercel.app/volunteer')
-      },
-      {
-        path: "addVolunteerNeed",
-        element: <PrivateRoute><AddVolunteer></AddVolunteer></PrivateRoute>,
       },
       {
         path: "volunteerNeedDetails/:id",
@@ -80,8 +81,33 @@ const router = createBrowserRouter([
         element: <UserProfile></UserProfile>,
       },
       {
+        path: "addVolunteerNeed",
+        element: <PrivateRoute><AddVolunteer></AddVolunteer></PrivateRoute>,
+      },
+      {
+        path: "myVolunteerNeed",
+        element: <PrivateRoute><NeedPost></NeedPost></PrivateRoute>,
+      },
+      {
+        path: "myVolunteerRequest",
+        element: <PrivateRoute><RequestPost></RequestPost></PrivateRoute>,
+      },
+      // admin routes
+      {
         path: "adminProfile",
         element: <AdminProfile></AdminProfile>,
+      },
+      {
+        path: "manageUsers",
+        element: <ManageUsers></ManageUsers>,
+      },
+      {
+        path: "manageAllPosts",
+        element: <ManageAllPosts></ManageAllPosts>,
+      },
+      {
+        path: "manageVolunteers",
+        element: <ManageVolunteers></ManageVolunteers>,
       },
     ]
   }

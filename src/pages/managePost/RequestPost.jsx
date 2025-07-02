@@ -56,8 +56,10 @@ const RequestPost = () => {
        }
 
     return (
-        <div>
-
+        <div className="ml-10">
+<h1 className="text-2xl md:text-3xl lg:text-4xl pt-5 font-bold text-center bg-gradient-to-r from-cyan-400 to-indigo-700 pb-1 text-transparent bg-clip-text my-8">
+               My Volunteer Request Posts 
+            </h1>
         {posts.length === 0 ? (
 
 <p className="text-center text-lg text-gray-500 font-semibold">
